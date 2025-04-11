@@ -16,6 +16,32 @@ No of available value[6] X Occurance of a Single Value[2] = 12 cells
 12 > 9 --> so all variables cannot be occured more than 2 times, which leads to a loosing condition.
 
 
+#### 4X4 Matrix
+
+Loosing combination cannot be achieved in 4X4 matrix
+
+Explanation : As there are 16 cells available and we have 6 values only to be filled in the cells
+
+for a winning combination to be achieved we need only 3 times a single value to be occured which will always be fullfilled as there are only 6 values and one bonus symbol to be filled in the 16th cells
+
+calculation: 6 X 2 = 12 
+
+16 - 12 = 4 
+
+From 4 we can reduce one symbol for bonus, so in total we have 3 cells left for winning combination to occur
+
+so there is always a opportunity in the 3 cells when fullfilled by any values to a achiev on winning combination.
+
+to achieve a loosing combination in 4x4 matrix we need to increase the number of values from 6 to 8
+
+Calculatin: 8 x 2 = 16  --> this explains that 8 values can be occured only to the max of 2 times, with which we can achieve a loosing combination.
+
+16 = total no of available cell
+
+
+
+
+
 
 
 ## Config.json
