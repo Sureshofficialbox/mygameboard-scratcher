@@ -3,7 +3,6 @@ Scratch game that generates a matrix from Standard symbols and Bonus symbols has
 
 ## Loosing Condition Achievement
 
-#### 3X3 Matrix
 Given Symbols are A, B, C, D, E, F
 
 in this matrix possiblity of loossing combination is high
@@ -18,18 +17,13 @@ In organization(game development company) point of view, in this scenario probab
 
 Hence to conculde the wining chances of the organization and user, can be altered by varing the number of symbol and size of the matrix.
 
- if no of symbols is >= 40 % of no of cells, then the loosing can be high.
+ if no of symbols is > [40 % of no of cell in matrix], then the loosing can be high.
+ EX: 
+Consider 3x3 Matrix, no of cells = 9
 
+no of symbols = 6
 
-#### 4X4 Matrix
-
-
-
-
-
-
-
-
+6 > 3.6 [40 % of 9]
 
 ## Config.json
 
