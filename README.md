@@ -8,38 +8,22 @@ Given Symbols are A, B, C, D, E, F
 
 in this matrix possiblity of loossing combination is high
 
-because [ A, B, C
+because [ "A", "B", "C"]
 
-          D, E, F
+        [ "D", "E", "F" ]
           
-      BONUS, A , F ] ----> This is the extreme case, here possibility of loosing combination is high.
+      ["BONUS", "A" , "F" ] ----> This is the extreme case, here possibility of loosing combination is high.
 
 In organization(game development company) point of view, in this scenario probability of wining is high.
+
 Hence to conculde the wining chances of the organization and user, can be altered by varing the number of symbol and size of the matrix.
+
  if no of symbols is >= 40 % of no of cells, then the loosing can be high.
 
 
 #### 4X4 Matrix
 
-Loosing combination cannot be achieved in 4X4 matrix
 
-Explanation : As there are 16 cells available and we have 6 values only to be filled in the cells
-
-for a winning combination to be achieved we need atleast 3 times a single value to be occured which will always be fullfilled as there are only 6 values and one bonus symbol to be filled in the 16th cells
-
-calculation: 6 X 2 = 12 
-
-16 - 12 = 4 
-
-From 4 we can reduce one symbol for bonus, so in total we have 3 cells left for winning combination to occur
-
-so there is always a opportunity in the 3 cells when fullfilled by any values to a achiev on winning combination.
-
-to achieve a loosing combination in 4x4 matrix we need to increase the number of values from 6 to 8
-
-Calculatin: 8 x 2 = 16  --> this explains that 8 values can be occured only to the max of 2 times, with which we can achieve a loosing combination.
-
-16 = total no of available cell
 
 
 
