@@ -4,16 +4,19 @@ Scratch game that generates a matrix from Standard symbols and Bonus symbols has
 ## Loosing Condition Achievement
 
 #### 3X3 Matrix
+Given Symbols are A, B, C, D, E, F
 
-No of cell available = 9
+in this matrix possiblity of loossing combination is high
 
-No of values available = 6 [A, B, C, D, E, F]
+because [ A, B, C
 
-No of available value[6] X Occurance of a Single Value[1] = 6 Cells 
+          D, E, F
+          
+      BONUS, A , F ] ----> This is the extreme case, here possibility of loosing combination is high.
 
-No of available value[6] X Occurance of a Single Value[2] = 12 cells
-
-12 > 9 --> so all variables cannot be occured more than 2 times, which leads to a loosing condition.
+In organization(game development company) point of view, in this scenario probability of wining is high.
+Hence to conculde the wining chances of the organization and user, can be altered by varing the number of symbol and size of the matrix.
+ if no of symbols is >= 40 % of no of cells, then the loosing can be high.
 
 
 #### 4X4 Matrix
@@ -22,7 +25,7 @@ Loosing combination cannot be achieved in 4X4 matrix
 
 Explanation : As there are 16 cells available and we have 6 values only to be filled in the cells
 
-for a winning combination to be achieved we need only 3 times a single value to be occured which will always be fullfilled as there are only 6 values and one bonus symbol to be filled in the 16th cells
+for a winning combination to be achieved we need atleast 3 times a single value to be occured which will always be fullfilled as there are only 6 values and one bonus symbol to be filled in the 16th cells
 
 calculation: 6 X 2 = 12 
 
