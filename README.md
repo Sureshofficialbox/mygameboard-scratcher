@@ -204,6 +204,33 @@ To execute/Test use the mentioned CLI
 
 ## Test Cases
 
+#### Winning combinatin with vertical occurance
+
+E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar  --config configfor4x4.json --betting-amount 242
+
+{
+  "matrix" : [
+  
+  [ "D", "F", "F", "D" ],
+  
+  [ "+500", "F", "E", "F" ], 
+  
+  [ "E", "F", "C", "C" ], 
+  
+  [ "C", "F", "B", "E" ] ],
+  
+  "reward" : 2847.4,
+  
+  "applied_winning_combinations" : {
+    "C" : [ "same_symbol_3_times" ],
+    "E" : [ "same_symbol_3_times" ],
+    "F" : [ "same_symbol_6_times", "same_symbols_vertically" ]
+  },
+  
+  "applied_bonus_symbol" : "+500"
+  
+}
+
 
 
 
