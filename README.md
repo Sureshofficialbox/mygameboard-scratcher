@@ -16,7 +16,10 @@ To execute/Test use the mentioned CLI
 
 ## Test Cases
 
+#### Bonus Miss:
+
 E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 100
+
 {
   "matrix" : 
 [ 
@@ -31,18 +34,20 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
   "reward" : 150.0,
   
   "applied_winning_combinations" : {
-  
     "F" : [ "same_symbol_3_times" ]
-    
   },
   
   "applied_bonus_symbol" : "MISS"
+  
 }
 
-------------------
+#### Winning Condition With Bonus
+
 E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 500
+
 {
   "matrix" : [ 
+  
 [ "+1000", "D", "C" ], 
 
 [ "F", "D", "F" ], 
@@ -55,13 +60,18 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
   "applied_winning_combinations" : 
   {
     "F" : [ "same_symbol_4_times" ]
+    
   },
   
   "applied_bonus_symbol" : "+1000"
+  
 }
-----------------
+## Special Pattern Acheivemet
+
+#### Same Symbol Vertical Occurance
 
 E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 1000
+
 {
   "matrix" : [
   
@@ -72,33 +82,46 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
 [ "D", "C", "F" ] 
 
 ],
+
   "reward" : 25000.00,
   
   "applied_winning_combinations" : {
-  
     "C" : [ "same_symbol_3_times", "same_symbols_vertically" ],
     "F" : [ "same_symbol_4_times", "same_symbols_vertically" ]
   },
   
   "applied_bonus_symbol" : "+500"
+  
 }
 
-------------------------lossing combo----
-E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 2000
+#### Same Symbol Horizontal Occurance
+
+E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 4500
+
 {
-  "matrix" : [
+  "matrix" : [ 
   
- [ "F", "D", "A" ],
+[ "5x", "C", "F" ],
+
+ [ "E", "E", "E" ],
  
- [ "+500", "E", "E" ],
+ [ "D", "F", "B" ] 
  
- [ "C", "B", "C" ]
- 
- ],
-  "reward" : 0
+],
+
+  "reward" : 135000,
+  
+  "applied_winning_combinations" : {
+    "E" : [ "same_symbol_3_times", "same_symbols_horizontally" ]
+  },
+  "applied_bonus_symbol" : "5x"
 }
---------------------right to left diagonal---------------------
+
+
+#### Right to left diagonal same symbol occurance.
+
 E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 4100
+
 {
   "matrix" : [ 
   
@@ -115,49 +138,14 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
     "C" : [ "same_symbol_3_times", "same_symbols_diagonally_right_to_left" ]
   },
   "applied_bonus_symbol" : "+1000"
+  
 }
 
----------------------horizontal------------
-E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 4500
-{
-  "matrix" : [ 
-  
-[ "5x", "C", "F" ],
 
- [ "E", "E", "E" ],
- 
- [ "D", "F", "B" ] 
- 
-],
-  "reward" : 135000,
-  
-  "applied_winning_combinations" : {
-    "E" : [ "same_symbol_3_times", "same_symbols_horizontally" ]
-  },
-  
-  "applied_bonus_symbol" : "5x"
-}
-----------vertically
+#### Left to right diagonal same symbol occurance.
+
 E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 10
-{
-  "matrix" : [ 
-  
-  [ "5x", "D", "C" ], 
-  
-  [ "E", "D", "F" ], 
-  
-  [ "F", "D", "E" ] 
-  ],
-  "reward" : 500,
-  
-  "applied_winning_combinations" : {
-    "D" : [ "same_symbol_3_times", "same_symbols_vertically" ]
-  },
-  
-  "applied_bonus_symbol" : "5x"
-}
-------------------diagonal left to right----------
-E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 10
+
 {
   "matrix" : [ 
   
@@ -167,6 +155,7 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
   
   [ "F", "D", "E" ]
   ],
+  
   "reward" : 500,
   
   "applied_winning_combinations" : {
@@ -174,8 +163,26 @@ E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --confi
   },
   
   "applied_bonus_symbol" : "5x"
+  
 }
 
+#### No winning combination occurance/ Loosig game
+
+E:\Dubai\mygameboard-scratcher>java -jar target\mygameboardscratcher.jar --config config.json --betting-amount 2000
+
+{
+  "matrix" : [
+  
+ [ "F", "D", "A" ],
+ 
+ [ "+500", "E", "E" ],
+ 
+ [ "C", "B", "C" ]
+ 
+ ],
+ 
+  "reward" : 0
+}
 
 
 
