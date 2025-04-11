@@ -1,6 +1,23 @@
 ## Description
 Scratch game that generates a matrix from Standard symbols and Bonus symbols has been developed, a winning combintations has been designed based on which user either will win or lost. User will place a bet with any amount which we call betting amount in this assignment.
 
+## Loosing Condition Achievement
+
+#### 3X3 Matrix
+
+No of cell available = 9
+
+No of values available = 6 [A, B, C, D, E, F]
+
+No of available value[6] X Occurance of a Single Value[1] = 6 Cells 
+
+No of available value[6] X Occurance of a Single Value[2] = 12 cells
+
+12 > 9 --> so all variables cannot be occured more than 2 times, which leads to a loosing condition.
+
+
+
+
 ## Config.json
 
 This json file holds the below mentioned data
@@ -13,6 +30,7 @@ This json file holds the below mentioned data
 To execute/Test use the mentioned CLI
 
 ## java -jar scratch - copy.jar --config config.json --betting-amount 100
+
 
 ## Test Cases
 
